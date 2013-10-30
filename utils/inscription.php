@@ -25,7 +25,7 @@
 		//insertion dans la BD
 	$req="INSERT INTO Utilisateurs (Nom, Prenom, Email, Pwd) VALUES ($Nom, $Prenom, $Email, $Pwd);";
 	$rep=mysql_query($req);
-	window.location.replace('');
+	window.location.replace('http:www.nba.com');
 	}
 
 	
