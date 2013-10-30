@@ -17,14 +17,9 @@
 	echo $tache1->nom();
 	echo $tache1->difficulte();
 	echo $tache1->description();
-	try{
-		//On associe un manager à la base de donnees
-		$manager = new TacheManager($PDO);
-		//Ajout de la tache dans la bdd
-		$manager->add($tache1);
 
-	}
-	catch (Exception $e){
-		die('Erreur : ' . $e->getMessage());
-	}
+	//On associe un manager à la base de donnees
+	$manager = new TacheManager($PDO);
+	//Ajout de la tache dans la bdd
+	$manager->add($tache1);
 ?>

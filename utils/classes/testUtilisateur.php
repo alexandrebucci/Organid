@@ -20,14 +20,9 @@
 	
 	echo $util1->prenom();
 	echo $util1->nom();
-	try{
-		//On associe un manager à la base de donnees
-		$manager = new UtilisateurManager($PDO);
-		//Ajout de l'utilisateur dans la bdd
-		//$manager->add($util1);
-
-	}
-	catch (Exception $e){
-		die('Erreur : ' . $e->getMessage());
-	}
+	
+	//On associe un manager à la base de donnees
+	$manager = new UtilisateurManager($PDO);
+	//Ajout de l'utilisateur dans la bdd
+	//$manager->add($util1);
 ?>
