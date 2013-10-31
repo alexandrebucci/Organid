@@ -22,7 +22,7 @@
 		//Debut de la session
 		$_SESSION['connecte']=1;
 		$_SESSION['id']=$id;
-		header("location:http://www.google.com");
+		header("location:../home.php");
 		exit;
 	} else {
 		echo "<script> alert('Mot de passe ou adresse e-mail incorrect');

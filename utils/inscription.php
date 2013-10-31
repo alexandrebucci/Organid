@@ -7,6 +7,7 @@
 	$Email=$_POST["Email"];
 	$Pwd=$_POST["Pwd"];		
 
+	//On verifie si l'adresse email n'est pas deja associée à un compte
 	//Requete avec PDO
 	$requete = $PDO->prepare ('SELECT `Email` FROM `Utilisateurs` WHERE `Email`=:email');
 	$requete->execute(array(
