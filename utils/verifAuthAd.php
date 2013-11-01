@@ -17,8 +17,10 @@
 	//Si l'email et le pwd existent dans la BDD
 	//count($resultat) == nombre d'elements dans le tableau;
 	if(count($resultat) != 0){
-		//Recupere l'id dans la base de donnée
-		$id = $resultat["Id_U"];
+		foreach ($resultat as $donnees) {
+			//Recupere l'id dans la base de donnée
+			$id = $donnees["Id_U"];
+		}
 		//Debut de la session
 		$_SESSION['connecte']=1;
 		$_SESSION['id']=$id;
