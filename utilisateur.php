@@ -34,7 +34,7 @@
                             </ul>
                             <ul class="nav menu">
                                 <li>
-                                    <a href="#">Tâches</a>
+                                    <a href="taches.php">Tâches</a>
                                 </li>
                                 <li>
                                     <a href="#">Messages<span id="nb_msg"><span></a>
