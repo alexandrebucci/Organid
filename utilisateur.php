@@ -2,6 +2,8 @@
     session_start();
     require_once(__DIR__ . '/datas/parametres.php');
     setlocale (LC_TIME, 'fr-FR', 'fra'); 
+    // echo "<script>alert(".$_SESSION['id'].")</script>";
+    //echo $_SESSION['id'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -56,7 +58,44 @@
                     </div>
                     <div class="span12">
                         <div class="span9">
-                           <p>Calendrier</p>
+                            <?php
+                                if (!empty($_GET['utilisateur']))
+                                {
+                                    $i = $_GET['utilisateur'];
+                                }
+                               // echo $i;
+                                $req0 = $PDO->prepare('SELECT * FROM `utilisateurs` WHERE `Id_U`= :id');
+                                $req0->execute(array(
+                                    ":id"=> $i
+                                ));
+                                
+                                $resultat0 = $req0->fetchAll(PDO::FETCH_ASSOC);
+                                foreach ($resultat0 as $donnees) {
+                                    echo "<h3>".ucfirst($donnees['Prenom'])." ".ucfirst($donnees['Nom'])."</h3>"; 
+                                    if (!empty ($donnees['Nom'])){
+                                         echo "Nom: ". ucfirst($donnees['Nom'])."<br>";
+                                    }
+                                    if (!empty ($donnees['Prenom'])){
+                                         echo "Prénom: ". ucfirst($donnees['Prenom'])."<br>";
+                                    }
+                                    if (!empty ($donnees['Age'])){
+                                        echo "Age: ". ucfirst($donnees['Age'])."<br>";
+                                    }
+                                    if (!empty ($donnees['Sexe'])){
+                                        echo "Sexe: ". ucfirst($donnees['Sexe'])."<br>";
+                                    }
+                                    if (!empty ($donnees['Email'])){
+                                        echo "Email: ". ucfirst($donnees['Email'])."<br>";
+                                    }
+                                    if (!empty ($donnees['Telephone'])){
+                                         echo "Téléphone: ". ucfirst($donnees['Telephone'])."<br>";
+                                    }
+                                    if (!empty ($donnees['Handicap'])){
+                                         echo "Handicap: ". ucfirst($donnees['Handicap']);
+                                    }
+                                   
+                                }
+                            ?>
                         </div>
                         <div class="span3">
                            <p><b>Utilisateurs</b></p>

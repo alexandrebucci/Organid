@@ -28,7 +28,7 @@
 		exit;
 	} else {
 		echo "<script> alert('Mot de passe ou adresse e-mail incorrect');
-		window.location.replace('../index.html');
+		window.location.replace('../index.php');
 		</script> ";
 	}
 ?>

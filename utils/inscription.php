@@ -20,7 +20,7 @@
 	//count($resultat) == nombre d'elements dans le tableau;
 	if(count($resultat) != 0){
 		echo "<script> alert('Cette adresse mail est déjà attribué à un compte');
-		window.location.replace('../index.html');
+		window.location.replace('../index.php');
 		</script> ";
 	} else {
 		//Sinon on ajoute l'utilisateur a la BDD
@@ -33,7 +33,7 @@
 	      ":pwd" => $Pwd
 	    ));
 	    echo "<script> alert('Votre compte a été créé avec succès');
-		window.location.replace('http://google.com');
+		window.location.replace('../home.php');
 		</script> ";
 	}
 ?>
