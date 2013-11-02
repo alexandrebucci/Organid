@@ -1,0 +1,11 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+		
+		RewriteRule ^Home$ home.php [L]
+		RewriteRule ^Taches-a-effectuer$ taches.php [L]
+		RewriteRule ^Ajouter-une-tache$ addTache.php [L]
+		RewriteRule ^Modifiez-votre-profil$ utilisateurModif.php [L]
+		RewriteRule ^([a-zA-z]*)-([a-zA-z]*)$ utilisateur.php?prenom=$1&nom=$2 [L]
+</IfModule>

@@ -14,27 +14,10 @@
         <script src="js/bootstrap.min.js"></script>
     </head>
     <body>
-        <header>
-            <nav>
-                <div class="navbar navbar-inverse navbar-fixed-top">
-                    <div class="navbar-inner">
-                        <div class="container">
-                            <!-- <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            </button> -->
-                            <ul class="nav">
-                                <li id="home-menu">
-                                    <a href="#"><img src="img/logo.svg" alt="logo" id="logo"></i> Organid</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            <!-- Menu de navigation -->
-        </header>
+        <?php
+            //Inclusion de la navigation
+            include('template/header.php');
+        ?>
         <section class="main-home">
             <div class="container-fluid">
                 <div class="row-fluid">
