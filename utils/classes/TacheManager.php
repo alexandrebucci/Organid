@@ -10,15 +10,14 @@ class TacheManager
   //Ajour d'une tache à la base de donnee
   public function add(Tache $tache)
   {
-    $q = $this->db->prepare('INSERT INTO taches (`Nom`, `Difficulte`, `Description`, `Id_Cat`, `Id_U`) VALUES (:nom, :difficulte, 
-    :description, :id_Cat, :id_U)');
+    $q = $this->db->prepare('INSERT INTO taches (`Nom`, `Difficulte`, `Description`, `Id_Cat`) VALUES (:nom, :difficulte, 
+    :description, :id_Cat)');
  
     $q->execute(array(
       ":nom" => $tache->nom(),
       ":difficulte" => $tache->difficulte(),
       ":description" => $tache->description(),
-      ":id_Cat" => $tache->id_Cat(),
-      ":id_U" => $tache->id_U()
+      ":id_Cat" => $tache->id_Cat()
     ));
   }
  
@@ -46,15 +45,14 @@ class TacheManager
   public function update(Tache $tache)
   {
     //preparation de la requete avec PDO
-    $q = $this->db->prepare('UPDATE taches SET (`Nom`, `Difficulte`, `Description`, `Id_Cat`, `Id_U`) VALUES (:nom, :difficulte, 
-    :description, :id_Cat, :id_U) WHERE `Id_Tm` = :id');
+    $q = $this->db->prepare('UPDATE taches SET (`Nom`, `Difficulte`, `Description`, `Id_Cat`) VALUES (:nom, :difficulte, 
+    :description, :id_Cat) WHERE `Id_Tm` = :id');
     //Asignation des valeurs
     $q->execute(array(
       ":nom" => $tache->nom(),
       ":difficulte" => $tache->difficulte(),
       ":description" => $tache->description(),
       ":id_Cat" => $tache->id_Cat(),
-      ":id_U" => $tache->id_U(),
       ":id" =>$tache->id()
     ));
   }

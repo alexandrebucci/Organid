@@ -6,7 +6,6 @@
 		private $difficulte;
 		private $description;
 		private $id_Cat;
-		private $id_U;
 		
 		//Fonctions Getter
 		public function id() { return $this->id; }
@@ -14,7 +13,6 @@
 		public function difficulte() { return $this->difficulte; }
 		public function description() { return $this->description; }
 		public function id_Cat() { return $this->id_Cat; }
-		public function id_U() { return $this->id_U; }
 
 		//La fonction hydratation consiste a donner à chaque variable la valeur correpondante dans la BDD
 		public function hydratation(array $donnees){
@@ -36,6 +34,5 @@
 		public function setDifficulte($difficulte) { $this->difficulte = $difficulte; }
 		public function setDescription($description) { $this->description = $description; }
 		public function setId_Cat($id_Cat) { $this->id_Cat = $id_Cat; }
-		public function setId_U($id_U) { $this->id_U = $id_U; }
 	}
 ?>
