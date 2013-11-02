@@ -24,5 +24,5 @@
 	//On associe un manager à la base de donnees
 	$manager = new UtilisateurManager($PDO);
 	//Ajout de l'utilisateur dans la bdd
-	//$manager->add($util1);
+	$manager->update($util1);
 ?>

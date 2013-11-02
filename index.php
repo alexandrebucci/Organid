@@ -1,6 +1,6 @@
 <?php
     //On verifie si l'utilisateur est deja connecté
-    include_once(__DIR__.'/utils/auth.php');
+    //include_once(__DIR__.'/utils/auth.php');
 ?>
 <!DOCTYPE html>
 <html lang="fr">

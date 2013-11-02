@@ -50,8 +50,8 @@ class UtilisateurManager
   public function update(Utilisateur $utilisateur)
   {
     //preparation de la requete avec PDO
-    $q = $this->db->prepare('UPDATE utilisateurs SET (`Nom`, `Prenom`, `Age`, `Sexe`, `Email`, `Pwd`, `Telephone`, `Handicap`, `Avatar`)
-     VALUES (:nom, :prenom, :sexe, :age, :email, :pwd, :telephone, :handicap, :avatar) WHERE `id_U` = :id');
+    $q = $this->db->prepare('UPDATE utilisateurs SET `Nom`=:nom, `Prenom`=:prenom, `Age`=:age, `Sexe`=:sexe, `Email`=:email,
+    `Pwd`=:pwd, `Telephone`=:telephone, `Handicap`=:handicap WHERE `id_U` = :id');
     //Asignation des valeurs
     $q->execute(array(
       ":nom" => $utilisateur->nom(),
@@ -62,7 +62,6 @@ class UtilisateurManager
       ":pwd" => $utilisateur->pwd(),
       ":telephone" => $utilisateur->telephone(),
       ":handicap" => $utilisateur->handicap(),
-      ":avatar" => $utilisateur->avatar(),
       ":id" =>$utilisateur->id()
     ));
   }
