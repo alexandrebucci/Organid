@@ -5,8 +5,6 @@
   define("BASE_DB","organid");
   //Windows
   define("PASSWD_DB","");
-  //Mac
-  //define("PASSWD_DB","root");
 
   try {
     $PDO = new PDO("mysql:host=".HOST_DB.";dbname=".BASE_DB."", USER_DB, PASSWD_DB);
