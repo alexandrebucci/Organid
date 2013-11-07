@@ -4624,7 +4624,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar .nav .dropdown-toggle .caret {
-  margin-top: 8px;
+  margin-top: 18px;
 }
 
 .navbar .nav > li > a:focus,
@@ -4865,13 +4865,13 @@ input[type="submit"].btn.btn-mini {
 
 .navbar-inverse .nav li.dropdown > a:hover .caret,
 .navbar-inverse .nav li.dropdown > a:focus .caret {
-  border-top-color: #ffffff;
-  border-bottom-color: #ffffff;
+  border-top-color: #1abc9c;
+  border-bottom-color: #1abc9c;
 }
 
 .navbar-inverse .nav li.dropdown > .dropdown-toggle .caret {
-  border-top-color: #999999;
-  border-bottom-color: #999999;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
 }
 
 .navbar-inverse .nav li.dropdown.open > .dropdown-toggle .caret,

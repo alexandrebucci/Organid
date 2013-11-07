@@ -43,7 +43,7 @@
                                 
                                 $resultat0 = $req0->fetchAll(PDO::FETCH_ASSOC);
                                 foreach ($resultat0 as $donnees) {
-                                    echo "<h3>".ucfirst($donnees['Prenom'])." ".ucfirst($donnees['Nom'])."</h3>"; 
+                                    echo "<h2>".ucfirst($donnees['Prenom'])." ".ucfirst($donnees['Nom'])."</h2>"; 
                                     if (!empty ($donnees['Nom'])){
                                          echo "Nom: ". ucfirst($donnees['Nom'])."<br>";
                                     }

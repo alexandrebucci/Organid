@@ -41,12 +41,15 @@
                                 Description:<input type="text" class="input-block-level" placeholder="Description" name="Description" id="Description">
                                 Catégorie:
                                 <select class="input-block-level" name="Categorie" id="Categorie">
+                                    <option value="vide"></option>
                                     <?php
                                         foreach ($resultat0 as $donnees) {
                                             echo "<option value='".$donnees['Id_Cat']."'>".$donnees['Nom']."</option>";
                                         }
                                     ?>
                                 </select>
+                                Autre catégorie:
+                                <input type="text" class="input-block-level" placeholder="Autre Categorie" name="AutreCategorie" id="AutreCategorie">
 
                                 <button class="bt_valid" type="submit">Ajouter</button>
                             </form>

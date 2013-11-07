@@ -22,10 +22,6 @@
         <section class="main-home">
             <div class="container-fluid">
                 <div class="row-fluid">
-                    <div id="rappel_div">
-                        <h4>Rappels</h4>
-                        <p>Lorem</p>
-                    </div>
                     <div class="span12">
                         <div class="span9">
                             <p>Calendrier</p>
@@ -36,12 +32,12 @@
                             ?>
                     </div>
                 </div>
+            </div>
         </section>
-        </div>
         <!-- En-tete de page -->
         <script src="js/jquery.js"></script>
         <!-- Script ajax pour verifier le formulaire -->
         <script type="text/javascript" src="js/ajax-form.js"></script>
-        <script src="js/rappel_switch.js"></script>
+        <!-- Menu de navigation -->
     </body>
 </html>

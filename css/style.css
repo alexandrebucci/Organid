@@ -94,6 +94,7 @@ form a {
 }
 
 .main-home form h2,
+.span9 h2,
 .span3 h2 {
   color: #34495e;
   text-shadow: 1px 1px 0px #34B196;
@@ -137,16 +138,24 @@ form a {
   margin-left: 20px;
 }
 
+hr {
+  display: block;
+  border: 1px solid #34495e;
+  margin: 1em 0;
+  padding: 0;
+  border-radius: 10px;
+  height: 0px;
+}
+
 #rappel_div {
   position: absolute;
   background: rgba(52, 73, 94,0.7);
   border: 3px solid rgba(26, 188, 156,1.0);
   height: 280px;
   width: 420px;
-  margin-left: 50%;
+  margin-left: 90%;
   display: block;
   left: -238px;
-  margin-top: 5px;
 }
 #rappel_div:after, #rappel_div:before {
   bottom: 100%;
@@ -183,8 +192,24 @@ form a {
 
 #rightbar a {
   font-size: 15px;
+  background: white;
+  display: block;
+  padding: 15px 0px 15px 20px;
+  border-bottom: 2px solid #1abc9c;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  margin-bottom: 5px;
+}
+
+#rightbar a:hover {
+  font-size: 15px;
+  background: #1abc9c;
+  display: block;
+  padding: 15px 0px 15px 20px;
+  border-bottom: 2px solid #34495e;
+
 }
 
 #rightbar {
-  border: 1px solid black;
 }

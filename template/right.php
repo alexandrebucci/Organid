@@ -10,7 +10,7 @@
                                 $resultat1 = $req1->fetchAll(PDO::FETCH_ASSOC);
                                 foreach ($resultat1 as $donnees) {
                                     echo'
-                                    <a href="'.$donnees['Prenom'].'-'.$donnees['Nom'].'">'.ucfirst($donnees['Prenom'])." ".ucfirst($donnees['Nom']).'</a><br>';  
+                                    <a href="'.$donnees['Prenom'].'-'.$donnees['Nom'].'">'.ucfirst($donnees['Prenom'])." ".ucfirst($donnees['Nom']).'</a>';  
                                     
                                     /*echo'
                                     <a href="utilisateur.php?prenom='.$donnees['Prenom'].'&nom='.$donnees['Nom'].'">'.ucfirst($donnees['Prenom'])." ".ucfirst($donnees['Nom']).'</a><br>';  
