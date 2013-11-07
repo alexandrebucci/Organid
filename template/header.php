@@ -31,7 +31,7 @@
                                     <a href="#" id="rappel_a">Rappels<span id="nb_rappels"><span></a>
                                 </li>
                             </ul>
-                            <ul class="nav pull-right"> 
+                            <ul class="nav pull-right""> 
                                 <li class="dropdown">
                                     <?php
                                         foreach ($resultat1 as $donnees) {

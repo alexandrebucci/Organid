@@ -1,5 +1,5 @@
-                        <div class="span3">
-                           <p><b>Utilisateurs</b></p>
+                        <div class="span3" id="rightbar">
+                           <h2>Utilisateurs</h2>
                            <?php
                                 //
                                 $req1 = $PDO->prepare('SELECT * FROM `utilisateurs` WHERE `Id_U` NOT IN (SELECT `Id_U` FROM `utilisateurs` WHERE `Id_U`= :id )');
@@ -20,7 +20,7 @@
 
                            ?>
 
-                           <p><b>Tâches à venir</b></p>
+                           <h2>Tâches à venir</h2>
                            <?php
                                 //On selectionne les tache entre aujourd'hui: NOW() et NOW + 1semaine 
                                 $req2 = $PDO->prepare('SELECT * FROM  `realise` ,  `taches` WHERE  `Id_U` =:id AND realise.Id_Tm = taches.Id_Tm AND  `Date` >= NOW( ) AND `Date` < (NOW() + INTERVAL 1 WEEK)');

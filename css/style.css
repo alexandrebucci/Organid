@@ -46,15 +46,15 @@ form a {
 }
 
 .nav > #home-menu > a{
-  border-bottom: 2px solid #34495e;
+  border-bottom: 3px solid #34495e;
 }
 
 .nav > li > a {
   color: #fff;
-  line-height: 40px;
+  line-height: 43px;
   vertical-align: middle;
   transition: all 0.5s ease-out; 
-  border-bottom: 2px solid #34495e;
+  border-bottom: 3px solid #34495e;
 }
 
 .menu li a {
@@ -93,7 +93,8 @@ form a {
   line-height: 26px;
 }
 
-.main-home form h2 {
+.main-home form h2,
+.span3 h2 {
   color: #34495e;
   text-shadow: 1px 1px 0px #34B196;
   font-size: 30px;
@@ -110,10 +111,10 @@ form a {
 }
 
 .bt_valid:hover {
-  background: #15AC8E;
+  background: #049B7D;
   color: white;
   padding: 8px 18px;
-  border-bottom: 2px solid #129178;
+  border-bottom: 2px solid #007056;
   transition: all 0.5s ease-out; 
 }
 
@@ -174,4 +175,16 @@ form a {
 
 #rappel_div {
   display: none;
+}
+
+#rightbar h2{
+  text-align: center;
+}
+
+#rightbar a {
+  font-size: 15px;
+}
+
+#rightbar {
+  border: 1px solid black;
 }

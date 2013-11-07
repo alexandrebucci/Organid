@@ -2,7 +2,7 @@
     session_start();
     require_once(__DIR__ . '/datas/parametres.php');
     setlocale (LC_TIME, 'fr-FR', 'fra'); 
-?>
+    ?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -15,10 +15,10 @@
         <script src="js/bootstrap.min.js"></script>
     </head>
     <body>
-       <?php
+        <?php
             //Inclusion de la navigation
             include('template/header.php');
-        ?>
+            ?>
         <section class="main-home">
             <div class="container-fluid">
                 <div class="row-fluid">
@@ -28,12 +28,12 @@
                     </div>
                     <div class="span12">
                         <div class="span9">
-                           <p>Calendrier</p>
+                            <p>Calendrier</p>
                         </div>
                         <?php
                             //Inclusion de la colone de droite
                             include('template/right.php');
-                        ?>
+                            ?>
                     </div>
                 </div>
         </section>
