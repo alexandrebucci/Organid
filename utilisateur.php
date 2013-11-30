@@ -24,10 +24,6 @@
         <section class="main-home">
             <div class="container-fluid">
                 <div class="row-fluid">
-                    <div id="rappel_div">
-                        <h4>Rappels</h4>
-                        <p>Lorem</p>
-                    </div>
                     <div class="span12">
                         <div class="span9">
                             <?php
@@ -41,6 +37,7 @@
                                     ":id"=> $i
                                 ));
                                 
+                                echo "<div class='user'>";
                                 $resultat0 = $req0->fetchAll(PDO::FETCH_ASSOC);
                                 foreach ($resultat0 as $donnees) {
                                     echo "<h2>".ucfirst($donnees['Prenom'])." ".ucfirst($donnees['Nom'])."</h2>"; 
@@ -67,6 +64,7 @@
                                     }
                                    
                                 }
+                                echo "</div>";
                             ?>
                         </div>
                         <?php
@@ -81,6 +79,5 @@
         <script src="js/jquery.js"></script>
         <!-- Script ajax pour verifier le formulaire -->
         <script type="text/javascript" src="js/ajax-form.js"></script>
-        <script src="js/rappel_switch.js"></script>
     </body>
 </html>
