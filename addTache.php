@@ -28,10 +28,6 @@
         <section class="main-home">
             <div class="container-fluid">
                 <div class="row-fluid">
-                    <div id="rappel_div">
-                        <h4>Rappels</h4>
-                        <p>Lorem</p>
-                    </div>
                     <div class="span12">
                         <div class="span9">
                             <h3>Ajouter une tache</h3>
@@ -43,6 +39,7 @@
                                 <select class="input-block-level" name="Categorie" id="Categorie">
                                     <option value="vide"></option>
                                     <?php
+                                        //Affichage dans une liste déroulante des catégories de tache existantes dans la base de données
                                         foreach ($resultat0 as $donnees) {
                                             echo "<option value='".$donnees['Id_Cat']."'>".$donnees['Nom']."</option>";
                                         }
@@ -66,6 +63,5 @@
         <script src="js/jquery.js"></script>
         <!-- Script ajax pour verifier le formulaire -->
         <script type="text/javascript" src="js/ajax-form.js"></script>
-        <script src="js/rappel_switch.js"></script>
     </body>
 </html>

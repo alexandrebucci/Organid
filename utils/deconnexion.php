@@ -3,7 +3,7 @@
     session_unset();
     session_destroy();
     
-    header("location:http://www.twitter.com");
+    header("location:../index.php");
     exit();
 	
 ?>

@@ -1,3 +1,8 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+</html>
 <?php
 	session_start();
     require_once(__DIR__ . '../../datas/parametres.php');
@@ -5,7 +10,7 @@
     require_once(__DIR__ . '../../utils/classes/TacheManager.php');
     require_once(__DIR__ . '../../utils/classes/Categorie.php');
     require_once(__DIR__ . '../../utils/classes/CategorieManager.php');
-
+    //Création des objets qui vont être utilisé
     $tache = new Tache();
     $manager = new TacheManager($PDO);
     $categorie = new Categorie();

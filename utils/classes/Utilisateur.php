@@ -11,6 +11,7 @@
 		private $telephone;
 		private $handicap;
 		private $avatar;
+		private $admin;
 		
 
 		//Fonctions Getter
@@ -24,6 +25,7 @@
 		public function telephone() { return $this->telephone; }
 		public function handicap() { return $this->handicap; }
 		public function avatar() { return $this->avatar; }
+		public function admin() { return $this->admin; }
 
 		//La fonction hydratation consiste a donner à chaque variable la valeur correpondante dans la BDD
 		public function hydratation(array $donnees){
@@ -50,5 +52,6 @@
 		public function setTelephone($telephone) { $this->telephone = $telephone; }
 		public function setHandicap($handicap) { $this->handicap = $handicap; }
 		public function setAvatar($avatar) { $this->avatar = $avatar; }
+		public function setAdmin($admin) { $this->admin = $admin; }
 	}
 ?>

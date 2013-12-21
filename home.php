@@ -29,7 +29,7 @@
                         <?php
                             //Inclusion de la colone de droite
                             include('template/right.php');
-                            ?>
+                        ?>
                     </div>
                 </div>
             </div>

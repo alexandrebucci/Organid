@@ -4,7 +4,7 @@
     require_once(__DIR__ . '/utils/classes/Utilisateur.php');
     require_once(__DIR__ . '/utils/classes/UtilisateurManager.php');
     setlocale (LC_TIME, 'fr-FR', 'fra'); 
-
+    //On créer un nouveal objet utilisateur
     $utilisateur = new Utilisateur();
 ?>
 <!DOCTYPE html>
@@ -26,20 +26,19 @@
         <section class="main-home">
             <div class="container-fluid">
                 <div class="row-fluid">
-                    <div id="rappel_div">
-                        <h4>Rappels</h4>
-                        <p>Lorem</p>
-                    </div>
+                    
                     <div class="span12">
                         <div class="span9">
                             <?php
                                // echo $i;
+                                //Recupere les informations l'utilisateur concerné dans la base de données
                                 $req0 = $PDO->prepare('SELECT * FROM `utilisateurs` WHERE `Id_U`= :id');
                                 $req0->execute(array(
                                     ":id"=> $_SESSION['id']
                                 ));
                                 
                                 $resultat0 = $req0->fetchAll(PDO::FETCH_ASSOC);
+                                //On attribut les valeurs de la base de données à l'objet Utilisateur
                                 foreach ($resultat0 as $donnees) {
                                     $utilisateur->hydratation(array(
                                         'nom' => $donnees['Nom'],
@@ -51,11 +50,14 @@
                                         'email' => $donnees['Email'],
                                         'pwd' => $donnees['Pwd'],
                                         'telephone' => $donnees['Telephone'],
-                                        'avatar' => $donnees['Avatar']
+                                        'avatar' => $donnees['Avatar'],
+                                        'admin' => $donnees['Admin']
                                     ));
-
+                                    //on affiche le prenom et nom de l'utilisateur
                                     echo "<h3>".ucfirst($donnees['Prenom'])." ".ucfirst($donnees['Nom'])."</h3>"; 
+                                }
                             ?>
+                            <!--On affiche un formulaire pré-rempli avec les infos actuelles de l'utilisateur-->
                             <form class="form-signin" method="POST" action="utils/utilisateurModifTraitement.php">
                                 Nom:<input type="text" class="input-block-level" value="<?php echo $utilisateur->nom();?>" name="Nom" id="Nom">
                                 Prenom:<input type="text" class="input-block-level" value="<?php echo $utilisateur->prenom();?>" name="Prenom" id="Prenom">
@@ -65,12 +67,10 @@
                                 Email:<input type="text" class="input-block-level" value="<?php echo $utilisateur->email();?>" name="Email" id="Email">
                                 Mot de passe:<input type="text" class="input-block-level" value="<?php echo $utilisateur->pwd();?>" name="Pwd" id="Pwd">
                                 Téléphone:<input type="text" class="input-block-level" value="<?php echo $utilisateur->telephone();?>" name="Telephone" id="Telephone">
+                                Admin:<input type="text" class="input-block-level" value="<?php echo $utilisateur->admin();?>" name="Admin" id="Admin">
 
                                 <button class="bt_valid" type="submit">Enregistrer</button>
                             </form>
-                            <?php
-                                }//Fin foreach ligne 72
-                            ?>
                         </div>
                         <?php
                             //Inclusion de la colone de droite
@@ -84,6 +84,5 @@
         <script src="js/jquery.js"></script>
         <!-- Script ajax pour verifier le formulaire -->
         <script type="text/javascript" src="js/ajax-form.js"></script>
-        <script src="js/rappel_switch.js"></script>
     </body>
 </html>

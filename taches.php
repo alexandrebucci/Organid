@@ -24,29 +24,29 @@
         <section class="main-home">
             <div class="container-fluid">
                 <div class="row-fluid">
-                    <div id="rappel_div">
-                        <h4>Rappels</h4>
-                        <p>Lorem</p>
-                    </div>
+                    
                     <div class="span12">
-                        <div class="span9">
-                            <h3>Taches</h3>
+                        <div class="span9 user">
+                            <h2>Taches</h2>
                             <p>Affichage des taches à effectuer pour les deux semaines à venir</p>
                             <?php
+                                //Récupération des taches à venir entre la date actuelle et (date actuelle + 2 semaines)
                                 $req0 = $PDO->prepare('SELECT * FROM  `realise` ,  `taches` WHERE  `Id_U` =:id AND realise.Id_Tm = taches.Id_Tm AND  `Date` >= NOW( ) AND `Date` < (NOW() + INTERVAL 2 WEEK)');
                                 $req0->execute(array(
                                     ":id"=> $_SESSION['id']
                                 ));
                                 
                                 $resultat0 = $req0->fetchAll(PDO::FETCH_ASSOC);
+                                //Affichage des taches
                                 foreach ($resultat0 as $donnees) {
                                     echo"<div class='tache'>";
-                                    $date = $donnees['Date'];
-                                    //Date format 20/04/2013
-                                    $formatDate = utf8_encode(strftime("%A %d %B %Y", strtotime($date)));   
-                                   // print_r($donnees);
-                                    echo "<b>".ucfirst($formatDate)."</b></br>".$donnees['Nom']."</br>".$donnees['Description'];
-                                    echo "</div>";
+                                        $date = $donnees['Date'];
+                                        //Date format 20/04/2013
+                                        $formatDate = utf8_encode(strftime("%A %d %B %Y", strtotime($date)));   
+                                       // print_r($donnees);
+                                        //On affiche la date, le nom de la tache et sa description
+                                        echo "<h3>".ucfirst($formatDate)."</h3><h4>".$donnees['Nom']."</h4><p>".$donnees['Description']."</p>";
+                                        echo "</div>";
                                 }
                             ?>
                         </div>
@@ -62,6 +62,5 @@
         <script src="js/jquery.js"></script>
         <!-- Script ajax pour verifier le formulaire -->
         <script type="text/javascript" src="js/ajax-form.js"></script>
-        <script src="js/rappel_switch.js"></script>
     </body>
 </html>

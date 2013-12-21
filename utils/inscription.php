@@ -1,3 +1,8 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+</html>
 <?php
     session_start();
     require_once(__DIR__ . '../../datas/parametres.php');

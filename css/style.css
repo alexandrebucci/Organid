@@ -149,13 +149,15 @@ hr {
 
 #rappel_div {
   position: absolute;
-  background: rgba(52, 73, 94,0.7);
+  background: rgba(52, 73, 94,0.93);
   border: 3px solid rgba(26, 188, 156,1.0);
   height: 280px;
   width: 420px;
-  margin-left: 90%;
+  margin-left: 77%;
   display: block;
   left: -238px;
+  color: white;
+  padding: 0 15px;
 }
 #rappel_div:after, #rappel_div:before {
   bottom: 100%;
@@ -210,7 +212,7 @@ hr {
 }
 
 .user {
-  padding: 19px 29px 29px;
+  padding: 19px 19px 19px;
   background-color: #fff;
   /*border: 1px solid #e5e5e5;*/
   /*-webkit-border-radius: 5px;*/
@@ -219,4 +221,70 @@ hr {
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
   box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.user span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.user img {
+  height:140px;
+  padding: 15px 0px 0px 50px;
+}
+
+.noleft {
+  margin-left: 0!important;
+}
+
+form {
+  text-align:left;
+}
+
+.list_tache_user {
+  margin-top: 30px;
+}
+
+.tache h3 {
+  font-size: 18px;
+  line-height: 20px;
+  margin-top: 20px;
+  color: #1abc9c;
+}
+
+.tache h4 {
+  font-size: 17px;
+}
+
+.tache h4:before {
+  content :"- ";
+}
+
+.tache p {
+  margin-left: 10px;
+  line-height: 5px;
+  font-style: italic;
+}
+
+
+.tache_right h3 {
+  font-size: 15px;
+  line-height: 20px;
+  margin-top: 20px;
+  color: #1abc9c;
+}
+
+.tache_right h4 {
+  font-size: 14px;
+}
+
+.tache_right h4:before {
+  content :"- ";
+}
+
+.tache_right p {
+  margin-left: 10px;
+  line-height: 5px;
+  font-style: italic;
+  font-size: 12px;
 }

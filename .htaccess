@@ -7,5 +7,6 @@ Options -Indexes
 		RewriteRule ^Taches-a-effectuer$ taches.php [L]
 		RewriteRule ^Ajouter-une-tache$ addTache.php [L]
 		RewriteRule ^Modifiez-votre-profil$ utilisateurModif.php [L]
+		RewriteRule ^Attribuer-les-taches$ attribuerTaches.php [L]
 		RewriteRule ^([a-zA-z]*)-([a-zA-z]*)$ utilisateur.php?prenom=$1&nom=$2 [L]
 </IfModule>

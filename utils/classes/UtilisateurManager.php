@@ -10,8 +10,8 @@ class UtilisateurManager
   //Ajour d'un utilisateur à la base de donnee
   public function add(Utilisateur $utilisateur)
   {
-    $q = $this->db->prepare('INSERT INTO utilisateurs (`Nom`, `Prenom`, `Age`, `Sexe`, `Email`, `Pwd`, `Telephone`, `Handicap`, `Avatar`)
-    VALUES (:nom, :prenom, :age, :sexe, :email, :pwd, :telephone, :handicap, :avatar)');
+    $q = $this->db->prepare('INSERT INTO utilisateurs (`Nom`, `Prenom`, `Age`, `Sexe`, `Email`, `Pwd`, `Telephone`, `Handicap`, `Avatar`, `Admin`)
+    VALUES (:nom, :prenom, :age, :sexe, :email, :pwd, :telephone, :handicap, :avatar, :admin)');
  
     $q->execute(array(
       ":nom" => $utilisateur->nom(),
@@ -22,7 +22,8 @@ class UtilisateurManager
       ":pwd" => $utilisateur->pwd(),
       ":telephone" => $utilisateur->telephone(),
       ":handicap" => $utilisateur->handicap(),
-      ":avatar" => $utilisateur->avatar()
+      ":avatar" => $utilisateur->avatar(),
+      ":admin" => $utilisateur->admin()
     ));
   }
  
@@ -51,7 +52,7 @@ class UtilisateurManager
   {
     //preparation de la requete avec PDO
     $q = $this->db->prepare('UPDATE utilisateurs SET `Nom`=:nom, `Prenom`=:prenom, `Age`=:age, `Sexe`=:sexe, `Email`=:email,
-    `Pwd`=:pwd, `Telephone`=:telephone, `Handicap`=:handicap WHERE `id_U` = :id');
+    `Pwd`=:pwd, `Telephone`=:telephone, `Handicap`=:handicap,`Admin`=:admin WHERE `id_U` = :id');
     //Asignation des valeurs
     $q->execute(array(
       ":nom" => $utilisateur->nom(),
@@ -62,6 +63,7 @@ class UtilisateurManager
       ":pwd" => $utilisateur->pwd(),
       ":telephone" => $utilisateur->telephone(),
       ":handicap" => $utilisateur->handicap(),
+      ":admin" => $utilisateur->admin(),
       ":id" =>$utilisateur->id()
     ));
   }

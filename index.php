@@ -26,7 +26,7 @@
                             </button> -->
                             <ul class="nav">
                                 <li id="home-menu">
-                                    <a href="Home"><img src="img/logo.svg" alt="logo" id="logo"></i> Organid</a>
+                                    <a href="#"><img src="img/logo.svg" alt="logo" id="logo"> Organid</a>
                                 </li>
                             </ul>
                         </div>
